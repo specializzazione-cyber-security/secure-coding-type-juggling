@@ -46,7 +46,7 @@ class PublicController extends BaseController{
             }
         }
         
-        if($user['secret_code'] != $_POST['secret_code']){
+        if($user['secret_code'] !== $_POST['secret_code']){
             return redirect('/login');
         }
 
