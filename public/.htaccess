@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteBase /
+
+# Impedisci la reindirizzazione per i file esistenti
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Reindirizza le richieste per /welcome a index.php
+RewriteRule ^welcome$ index.php [L]
